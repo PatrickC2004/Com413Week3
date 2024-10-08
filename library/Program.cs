@@ -1,9 +1,20 @@
 ﻿class Book
 {
+    //Properties
     string Title;
     string Author;
     string ISBN;
     int NoPages;
+
+    //Constructor for book project
+    public Book(string bookTitle, string bookAuthor,string bookISBN,int bookNoPages)
+    {
+        Title = bookTitle;
+        Author = bookAuthor;
+        ISBN = bookISBN;
+        NoPages = bookNoPages;
+    }
+
 
     void DisplayInfo()
     {
@@ -15,20 +26,11 @@
     static void Main(string[] args)
     {
         //Create new instance of book class
-        Book book = new Book();
-        book.Title = "C# for biggeners";
-        book.Author = "Bill Gates";
-        book.ISBN = "12345678";
-        book.NoPages = 200;
+        Book book = new Book("C# for biggeners", "Bill Gates", "232134", 200);
+        Book book2 = new Book("Game of throness", "GRR Martin", "87756267", 600);
 
-        Book book2 = new Book();
-        book2.Title = "C# Methods and Classes";
-        book2.Author = "Microsoft";
-        book2.ISBN = "153561";
-        book2.NoPages = 50;
-
+        
         book.DisplayInfo();
         book2.DisplayInfo();
-       
     }
 }
